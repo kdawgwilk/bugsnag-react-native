@@ -22,7 +22,7 @@
     "BugsnagReactNative.podspec"
   ],
   "scripts": {
-    "prepublish": "mkdir -p lib && babel --source-maps --out-dir='lib' --ignore='__tests__' src",
+    "prepare": "mkdir -p lib && babel --source-maps --out-dir='lib' --ignore='__tests__' src",
     "test:unit:js": "jest --coverage src/__tests__",
     "test:lint:js": "standard",
     "test:e2e:js": "bundle exec bugsnag-maze-runner --verbose",
