@@ -2,7 +2,6 @@ package com.bugsnag;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.bugsnag.android.BreadcrumbType;
 import com.bugsnag.android.Bugsnag;
@@ -434,7 +433,7 @@ class JavaScriptException extends Exception implements JsonStream.Streamable {
         this.rawStacktrace = rawStacktrace;
     }
 
-    public void toStream(@NonNull JsonStream writer) throws IOException {
+    public void toStream(JsonStream writer) throws IOException {
         writer.beginObject();
         writer.name("errorClass").value(name);
         writer.name("message").value(getLocalizedMessage());
